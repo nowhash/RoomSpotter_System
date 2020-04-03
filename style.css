@@ -1,0 +1,388 @@
+body{
+   font-family: 'Roboto', sans-serif;
+   background-color: #fff;
+}
+
+.wrapper{
+   width: 1050px;
+   margin: 0 auto; 
+   border: 1px solid wheat;
+   background: linear-gradient(white,rgb(247, 247, 255));
+   box-shadow: 0 0 5px 15px rgba(221, 199, 199, 0.4);
+}
+
+.footer{
+   margin-top: 50px;
+   background-color: #333;
+   font-family: 'Roboto', sans-serif;
+   color: #d3edf3;
+   text-align: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
+.header-part{
+   background-color: #333;
+   color: #f9f9f9;
+   padding-top: 20px;
+   text-shadow: 2px 2px 10px black;
+   margin-bottom: 10px;
+}
+
+/*Start Navigation Bar*/
+
+ul{
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background: #333;
+   width: 100%;
+}
+
+ul li{
+   float:left;
+   list-style-type: none;
+}
+
+ul li a{
+   color:#fff;
+   text-decoration:none;
+   text-transform: capitalize;
+   padding: 10px 16px;
+   display: inline-block;
+   font-size: 1.2em;
+}
+
+ul li a:hover{
+   background: #5C5044;
+}
+
+ul li a .dropdown-content:active{
+   background: rgb(141, 131, 120);
+}
+
+.dropdown-content{
+   background: #333;
+   display: none;
+   position:absolute;
+}
+
+.dropdown-content a{
+   display: block;
+   color: white;
+}
+
+.dropdown:hover .dropdown-content{
+   display: block;
+}
+
+.logout{
+   float:right; 
+   border:2px solid #C77676; 
+   border-radius:30px;
+   padding:10px;
+   color: white;
+   text-decoration: none;
+   position:absolute;
+   top:20;
+   right:12%;
+}
+
+.logout:hover{
+   color: rgb(60, 58, 66);
+   border-radius:25px;
+   background-color: rgb(207, 166, 166);
+   padding:10px;
+}
+
+/*End Navigation Bar*/
+
+/*Start Login Area*/
+
+.login-title{
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.8em;
+   font-weight: bolder;
+   color: #342D2C;
+   background: rgb(208, 208, 243);
+   width: 300px;
+   text-align: center;
+   border: 1px solid;
+   padding: 0px;
+   margin-bottom: 10px;
+}
+
+input[type=text], input[type=password] {
+   width: 300px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+ }
+
+ button {
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 300px;
+ }
+
+ button:hover {
+   opacity: 0.8;
+ }
+
+/*.userType{
+   padding-left: 100px;
+}*/
+/*End Login Area*/
+
+.user_profile{
+   font-size:1.1em;
+   font-family: times, Times New Roman, times-roman, georgia, serif;
+   color: #666; 
+}
+
+.heading1{
+font-family: times, Times New Roman, times-roman, georgia, serif;
+ color: #444;
+ margin: 0;
+ padding: 0px 0px 6px 0px;
+ font-size: 51px;
+ line-height: 44px;
+ letter-spacing: -2px;
+ font-weight: bold;
+}
+
+.heading2{
+   font-size: 2em;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   text-shadow: 1px 1px 5px rgb(75, 51, 51);
+   color: rgb(20, 20, 48);
+}
+
+.heading3{
+   font-size: 1.6em;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   text-shadow: 1px 1px 2px rgb(75, 51, 51);
+   color: rgb(23, 23, 32);
+}
+
+.heading4{
+   font-size:2em; 
+   text-align: center; 
+   font-family: 'Acme', sans-serif; 
+   font-weight: bold; 
+   text-shadow: 1px 1px 2px rgb(75, 51, 51); 
+   color: rgb(23, 23, 32); 
+   padding:10px;
+   border:1px solid #C0D8BC; 
+   border-radius: 10px;
+}
+.box{
+   border: 2px solid black
+   display: inline-block;
+   width: 500px;
+   border: 1px solid #000;
+   text-align: center;
+}
+
+.box1{
+   margin-top: 30px;
+   border: 2px solid rgb(245, 241, 241);
+   display: inline-block;
+   text-align: center;
+   padding: 5px;
+}
+
+.img1{
+   border-radius: 8px;
+   border: 5px solid;
+   border-style: inherit;
+}
+
+.para{
+   font-size: 20px;
+   font-family: 'Roboto', sans-serif;
+   color: rgb(33, 33, 36);
+   
+}
+
+table{
+   font-family: 'Roboto', sans-serif;
+   border: collapse;
+   padding: 10;
+   font-size: 20px;
+   color: rgb(68, 36, 47);
+}
+
+
+.container{
+   padding-top: 30px;
+   padding-left: 2%;
+   padding-right: 2%;
+   padding-bottom: 30px;
+}
+
+.container-backg{
+   background: white;
+   
+   border: 0 none;
+   border-radius: 20px;
+   box-shadow: 0 0 5px 10px rgba(226, 202, 202, 0.4);
+   padding: 30px 30px 20px;
+   box-sizing: border-box;
+}
+
+a{
+   color: rgb(19, 71, 95);
+
+}
+a:hover{
+   text-shadow: 0px 0px 10px #333;
+}
+
+p{
+   text-align: justify;
+}
+
+.content{
+   font-family: 'Inder', sans-serif;
+   font-size: 1.1em;
+   line-height: 28px; margin-bottom: 15px; 
+   color: #666; 
+   padding-bottom:20px;
+   padding-left: 50px;
+   padding-right: 50px;
+   border-bottom:1px solid #C0D8BC;
+   border-left:1px solid #C0D8BC;
+   border-right:1px solid #C0D8BC;
+   width: 85%;
+   margin:50px auto;
+   /*background-color: rgb(250, 238, 238);*/
+   border-radius: 20px;
+}
+
+.grid-container{
+   display: grid;
+   grid-template-columns: auto auto;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.contact-form{
+   padding-left: 150px;
+}
+
+.searchButton{
+   width: 50px;
+   background: rgb(102, 88, 88);
+}
+
+.headerLine{
+   border: 1px solid rgb(60, 65, 60);
+   width: 99.5%;
+   margin: 0px auto;
+}
+
+.body-content{
+   padding-top: 30px;
+}
+
+/*Tab Content Css */
+
+.tablinks {
+   width: auto;
+   background-color: rgb(61, 55, 55);
+   border-radius: 50px;
+ }
+
+ .tab button {
+   transition: 0.3s;
+   font-size: 20px;
+ }
+
+ .tab button:hover {
+   background-color: rgb(83, 68, 68);
+   box-shadow: 5px 5px 10px #332f2f;
+ }
+
+ .tab button.active {
+   background-color: rgb(228, 186, 186);
+   color: rgb(66, 61, 61);
+ }
+
+ .tabcontent {
+   display: none;
+   padding: 6px 12px;
+   border-top: none;
+}
+
+/*User Homepage Button*/
+.user-homepage{
+   width: auto;
+   background-color: rgb(61, 55, 55);
+   border-radius: 50px;
+   transition: 0.3s;
+   font-size: 1.2em;
+}
+
+.user-homepage.active{
+   width: auto;
+   background-color: rgb(190, 158, 158);
+   border-radius: 50px;
+   transition: 0.3s;
+   font-size: 1.2em;
+   color: rgb(59, 39, 39);
+}
+
+.user_data{
+   font-family: 'Open Sans', sans-serif;
+   border-collapse: collapse;
+   font-size: 1.1em;
+   color: rgb(83, 54, 63);
+   width: 90%;
+   margin: 0 auto;
+}
+
+.user_data tr td{
+   padding: 10px;
+   border: 1px solid rgb(245, 209, 209);
+}
+
+.profile_pic img{
+   height: 250px;
+   width: 250px;
+   border: 2px solid rgb(223, 207, 207);
+   border-radius: 500px;
+}
+
+.tr_one{
+   background-color: #f2f2f2;
+}
+
+.info_update{
+   background-color: rgb(65, 62, 62);
+   border-radius: 20px;
+   transition: 0.3s;
+   font-size: 1.2em;
+   color: rgb(227, 245, 236);
+}
+
+.uni_name_select_menu{
+   padding: 5px;
+   font-size: 1.3em;
+}
+
+.select_uni_menu{
+   padding-top: 10px;
+   margin-right: 20%;
+   margin-left: 20%;
+}
