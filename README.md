@@ -1,5 +1,4 @@
 # RoomSpotter_System
- <h1> Room Spotter </h1>
  <h3>An accommodation crisis resolving system for the applicants during admission test</h3>
  <p>
 <b>Objectives:</b> <br>
@@ -13,29 +12,29 @@
 <b> Scope to implement this project </b> <br>
 Overpopulated countries like Bangladesh are a potential place to adopt such a Room Spotter system to provide better accommodation facilities during the admission season. However, such systems also applicable for other gatherings including providing accommodation facilities in the tourist spot during the vacation period, gatherings of students for several contests, hackathons, Olympiads, etc.
 
-The scope of our proposed Room Spotter system will include the following applications: -
-•	Acts as a Platform between applicants and accommodation provider,
-•	Resolve the accommodation crisis as well as provide a better facility,
-•	Record all sorts of related information,
-•	Support to select the appropriate accommodation,
-•	Provide admission related news, and
-•	All accommodation related areas.
+The scope of our proposed Room Spotter system will include the following applications: - <br>
+•	Acts as a Platform between applicants and accommodation provider, <br>
+•	Resolve the accommodation crisis as well as provide a better facility, <br>
+•	Record all sorts of related information, <br>
+•	Support to select the appropriate accommodation, <br>
+•	Provide admission related news, and <br>
+•	All accommodation related areas. <br>
 </p>
 
 <p>
 <b> Features of our System </b> <br>
 Technical Features:
-•	Recording, querying, and analysis of applicants personal information.
-•	Recording, querying, and analysis of accommodation providers personal information.
-•	Applicants can quickly access the comprehensive accommodation providers information.
-•	jQuery form validation during registration.
-•	Retrieve the forget password via email.
-•	Search Applicants/Accommodation Providers based on speciality and name.
-•	Provide user friendly design and interface.
-•	Easily maintainable.
+•	Recording, querying, and analysis of applicants personal information.<br>
+•	Recording, querying, and analysis of accommodation providers personal information.<br>
+•	Applicants can quickly access the comprehensive accommodation providers information.<br>
+•	jQuery form validation during registration.<br>
+•	Retrieve the forget password via email.<br>
+•	Search Applicants/Accommodation Providers based on speciality and name.<br>
+•	Provide user friendly design and interface.<br>
+•	Easily maintainable.<br>
 
-Non-technical Features:
-•	Provide Frequently Asked Questions(FAQ) page.
-•	Provide user feedback in an efficient way.
-•	In news section, provide latest admission related news
+Non-technical Features:<br>
+•	Provide Frequently Asked Questions(FAQ) page.<br>
+•	Provide user feedback in an efficient way.<br>
+•	In news section, provide latest admission related news<br>
 </p>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2020 at 08:22 AM
+-- Generation Time: Apr 03, 2020 at 04:07 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -41,7 +41,7 @@ CREATE TABLE `accommodation` (
 INSERT INTO `accommodation` (`accom_id`, `room_no`, `available_space`) VALUES
 (1, '503', 2),
 (2, '0', 0),
-(3, '0', 0);
+(3, '402', 3);
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,9 @@ CREATE TABLE `accom_pro_reservation` (
 --
 
 INSERT INTO `accom_pro_reservation` (`reserve_id`, `providers_id`, `applicants_id`) VALUES
-(1, 1, 1);
+(1, 1, 1),
+(2, 3, 1),
+(3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `email`, `pass`) VALUES
-(1, 'abunowhashchy@gmail.com', '65d98620161cb0fa116020ca3bf81c55');
+(1, 'demo@roomspotter.com', '827ccb0eea8a706c4c34a16891f84e7b');
 
 -- --------------------------------------------------------
 
@@ -102,16 +104,17 @@ CREATE TABLE `applicants` (
   `gender` varchar(10) NOT NULL,
   `img_dest` varchar(500) NOT NULL,
   `vkey` varchar(500) NOT NULL,
-  `verified` int(10) NOT NULL
+  `verified` int(10) NOT NULL,
+  `fkey` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `applicants`
 --
 
-INSERT INTO `applicants` (`applicants_id`, `fname`, `lname`, `email`, `p_contact`, `e_contact`, `bcn`, `ssc_reg`, `hsc_reg`, `pass`, `c_pass`, `gender`, `img_dest`, `vkey`, `verified`) VALUES
-(1, 'Abu Nowhash', 'Chowdhury', 'abunowhashchy@gmail.com', '01521487507', '01521487507', '171081', '26531265', '14354894', 'f71b22449140d2f1def9bcbaeb519a2a', 'f71b22449140d2f1def9bcbaeb519a2a', 'male', '../upload/profile_thumbnail.png', 'ace0e19b0ec951b2a356234d19ae8200', 1),
-(2, 'Nowhash', 'Chowdhury', '844959595h@gmail.com', '01521487507', '01521487507', '171081', '5615151', '171081', 'f71b22449140d2f1def9bcbaeb519a2a', 'f71b22449140d2f1def9bcbaeb519a2a', 'male', '../upload/profile_thumbnail.png', '1f692c791b1447b53569c500ac8e0389', 0);
+INSERT INTO `applicants` (`applicants_id`, `fname`, `lname`, `email`, `p_contact`, `e_contact`, `bcn`, `ssc_reg`, `hsc_reg`, `pass`, `c_pass`, `gender`, `img_dest`, `vkey`, `verified`, `fkey`) VALUES
+(1, 'Abu Nowhash', 'Chowdhury', 'demo@roomspotter.com', '01000000000', '01000000000', '171001', '26531265', '14354894', '827ccb0eea8a706c4c34a16891f84e7b', '827ccb0eea8a706c4c34a16891f84e7b', 'male', '../upload/profile_thumbnail.png', 'ace0e19b0ec951b2a356234d19ae8200', 1, 'abcd333dde55279084e290e56d47e5b4'),
+(2, 'Nowhash', 'Chowdhury', '844959595h@gmail.com', '01000000000', '01000000000', '171001', '5615151', '171081', '827ccb0eea8a706c4c34a16891f84e7b', '827ccb0eea8a706c4c34a16891f84e7b', 'male', '../upload/profile_thumbnail.png', '1f692c791b1447b53569c500ac8e0389', 0, '');
 
 -- --------------------------------------------------------
 
@@ -130,7 +133,9 @@ CREATE TABLE `faq` (
 --
 
 INSERT INTO `faq` (`faq_id`, `question`, `solution`) VALUES
-(1, 'What is RoomSpotter System?', 'It is an accommodation Crisis Resolving System which helps applicants to find their accommodation near to their exam center.');
+(1, 'What is RoomSpotter System?', 'It is an accommodation Crisis Resolving System which helps applicants to find their accommodation near to their exam center.'),
+(2, 'Will the system always be free?', 'Our Room Spotter System will always be available at no cost. We are committed to you a free Room Spotter System'),
+(3, 'Is the system secure?', 'Your Information is protected by the highest levels of encryption. You need not worry about security. If you have any confusion about our security system,feel free to ask.');
 
 -- --------------------------------------------------------
 
@@ -173,17 +178,18 @@ CREATE TABLE `providers` (
   `c_pass` varchar(100) NOT NULL,
   `img_dest` varchar(500) NOT NULL,
   `vkey` varchar(500) NOT NULL,
-  `verified` int(10) NOT NULL
+  `verified` int(10) NOT NULL,
+  `fkey` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `providers`
 --
 
-INSERT INTO `providers` (`providers_id`, `fname`, `lname`, `email`, `p_contact`, `bcn`, `department`, `gender`, `pass`, `c_pass`, `img_dest`, `vkey`, `verified`) VALUES
-(1, 'Shawon ', 'Guha', 'shawon.roomspotter@gmail.com', '01521325587', '171074', 'Computer Science & Engineering', 'male', 'f71b22449140d2f1def9bcbaeb519a2a', 'f71b22449140d2f1def9bcbaeb519a2a', '../upload/profile_thumbnail.png', 'ffe74a1eb9c9a19687b60ca8f749f090', 1),
-(2, 'Mehedi Hasan', 'Shakil', 'smartboyp7@gmail.com', '01839583523', '171019', 'Electrical & Electronics Engineering', 'male', 'f71b22449140d2f1def9bcbaeb519a2a', 'f71b22449140d2f1def9bcbaeb519a2a', '../upload/profile_thumbnail.png', '5e44b0829d4dec300f5e595c3e825981', 1),
-(3, 'Mohammad', 'Forhad', 'mohammadforhad031@gmail.com', '01977077929', '171021', 'Electrical & Electronics Engineering', 'male', 'f71b22449140d2f1def9bcbaeb519a2a', 'f71b22449140d2f1def9bcbaeb519a2a', '../upload/profile_thumbnail.png', 'ca33c74ab4ea36aec1382a1b370845d2', 1);
+INSERT INTO `providers` (`providers_id`, `fname`, `lname`, `email`, `p_contact`, `bcn`, `department`, `gender`, `pass`, `c_pass`, `img_dest`, `vkey`, `verified`, `fkey`) VALUES
+(1, 'Shawon ', 'Guha', 'demo@roomspotter.com', '01000000000', '171001', 'Computer Science & Engineering', 'male', '827ccb0eea8a706c4c34a16891f84e7b', '827ccb0eea8a706c4c34a16891f84e7b', '../upload/profile_thumbnail.png', 'ffe74a1eb9c9a19687b60ca8f749f090', 1, ''),
+(2, 'Mehedi Hasan', 'Shakil', 'demo@roomspotter.com', '01000000000', '171001', 'Electrical & Electronics Engineering', 'male', '827ccb0eea8a706c4c34a16891f84e7b', '827ccb0eea8a706c4c34a16891f84e7b', '../upload/profile_thumbnail.png', '5e44b0829d4dec300f5e595c3e825981', 1, ''),
+(3, 'Mohammad', 'Forhad', 'demo@roomspotter.com', '01000000000', '171001', 'Electrical & Electronics Engineering', 'male', '827ccb0eea8a706c4c34a16891f84e7b', '827ccb0eea8a706c4c34a16891f84e7b', '../upload/profile_thumbnail.png', 'ca33c74ab4ea36aec1382a1b370845d2', 1, '');
 
 -- --------------------------------------------------------
 
@@ -243,7 +249,9 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`reserve_id`, `check_in`, `check_out`, `reserve_status`) VALUES
-(1, '2020-03-01', '2020-03-04', 0);
+(1, '2020-03-01', '2020-03-04', 0),
+(2, '2020-03-01', '2020-03-02', 0),
+(3, '2020-04-01', '2020-04-06', 1);
 
 -- --------------------------------------------------------
 
@@ -355,7 +363,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `news`
